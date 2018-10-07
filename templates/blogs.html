@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Build a Blog!</h1>
+<form method='post'>
+    <label>
+        Title of Blog:
+        <input type="text" name='name' />
+    </label>
+    <input type="submit" value='Add Name' />
+    <label>
+    Info in Blog:
+        <input type="text" name='body' />
+    </label>
+    <input type="submit" value='Add Body' />
+    
+    
+    
+</form>
+
+<hr />
+
+    {% if name|length == 0 %}
+    <p>Please enter a title</p>
+    {% else %}
+
+        <ul>
+            {% for blog in blogs %}
+            <li>{{blog_name}}
+                <form method="POST" action="/add-name">
+                  <input type="text" name "blog-id" value="{{blog.id}}"/>
+                  
+                </form>
+            </li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+
+
+{% endblock %}
