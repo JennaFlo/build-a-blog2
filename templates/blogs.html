@@ -1,40 +1,30 @@
 {% extends "base.html" %}
 
-{% block content %}
+{% block content %} 
+{% if single_post == False %}
 <h1>Build a Blog!</h1>
-<form method='post'>
-    <label>
-        Title of Blog:
-        <input type="text" name='name' />
-    </label>
-    <input type="submit" value='Add Name' />
-    <label>
-    Info in Blog:
-        <input type="text" name='body' />
-    </label>
-    <input type="submit" value='Add Body' />
-    
-    
-    
-</form>
 
+    
 <hr />
 
-    {% if name|length == 0 %}
-    <p>Please enter a title</p>
+    {% if blogs|length == 0 %}
+    <p>You havent posted anything yet bitches!</p>
     {% else %}
 
         <ul>
             {% for blog in blogs %}
-            <li>{{blog_name}}
-                <form method="POST" action="/add-name">
-                  <input type="text" name "blog-id" value="{{blog.id}}"/>
+            
+                <a href='/blogs?id={{blog.id}}'>{{blog.name}}</a>
+                <p>{{blog.blog}}</p>
                   
-                </form>
-            </li>
+                
+            
             {% endfor %}
         </ul>
     {% endif %}
-
+{% else %}
+<h1>{{blogs.name}}</h1>
+<p>{{blogs.blog}}</p>
+{% endif %}
 
 {% endblock %}
