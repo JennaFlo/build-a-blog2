@@ -1,0 +1,43 @@
+body{
+    background-color: purple;
+}
+
+h1{
+    color: darkcyan;
+    text-shadow: 2px 2px white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+    
+}
+
+h2{
+    color: pink;
+    font-family: 'Tahoma'
+}
+
+h3{
+    color: darkorange;
+    font-size: 14px;
+    font-family: 'Tahoma'
+}
+
+h4{
+    color: lightseagreen;
+    font-size: 16px;
+    font-family: 'Tahoma'
+}
+button{
+    background-color: yellowgreen;
+    color: darkred;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+    font-size: 25;
+}
+body{
+    text-align: center;
+}
+.error{
+    color: red;
+}
+
+ul{
+    text-align: center;
+}

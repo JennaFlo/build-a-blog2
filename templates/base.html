@@ -2,15 +2,16 @@
 <html>
     <head>
         <title>{{title}}</title>
+        <link rel="stylesheet" href="/static/main.css" type="text/css"/>
+        
     </head>
 <body>
 
     <div>
-        <a href='/blogs'>Main Blog Page!</a>
-    </div>
-
-    <div>
-            <a href='/newposts'>Add a Blog Page!</a>
+        <span>
+        <a href='/blogs'><h2>Main Blog Page!</h2></a>
+        <a href='/newposts'><h2>Add a Blog Page!</h2></a>
+        </span>
     </div>
 
     {% block content %}

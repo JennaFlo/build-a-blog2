@@ -4,17 +4,21 @@
 <h1>Build a Blog!</h1>
 <form method='post'>
     <label>
-        Title of Blog:<br>
+        <h3>Title of Blog:</h3><br>
         <input type="text" name='name' value='{{old_name}}' />
     </label>
     <p class='error'>{{title_error}}</p>
     <br>
     <label>
-    Info in Blog:
+    <h3>Info in Blog:</h3>
+    <div>
         <textarea name='content'>{{old_post}}</textarea>
         <p class='error'>{{content_error}}</p>
+    </div>
     </label>
+    <div>
     <input type="submit" value='Add Post' />
+    </div>
 </form>
 
 

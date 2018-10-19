@@ -8,14 +8,14 @@
 <hr />
 
     {% if blogs|length == 0 %}
-    <p>You havent posted anything yet bitches!</p>
+    <p>You havent posted anything yet!</p>
     {% else %}
 
         <ul>
             {% for blog in blogs %}
             
-                <a href='/blogs?id={{blog.id}}'>{{blog.name}}</a>
-                <p>{{blog.blog}}</p>
+                <a href='/blogs?id={{blog.id}}'><h3>{{blog.name}}</h3></a>
+                <h4><p>{{blog.blog}}</p></h4>
                   
                 
             
